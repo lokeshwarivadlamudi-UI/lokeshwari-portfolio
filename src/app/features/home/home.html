@@ -1,0 +1,62 @@
+<section class="hero">
+
+  <div class="hero-content">
+
+    <p class="greeting">Hi, I'm</p>
+
+    <h1>{{name()}}</h1>
+
+    <h2>{{role()}}</h2>
+
+    <p class="description">
+      {{description()}}
+    </p>
+<p class="availability">
+  @if (isAvailable()) {
+    🟢 Open to frontend opportunities in Sweden
+  } @else {
+    ⚪ Currently unavailable
+  }
+</p>
+
+<button
+  type="button"
+  class="btn-secondary"
+  (click)="toggleAvailability()">
+  Toggle Availability
+</button>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">
+        View My Projects
+      </a>
+
+      <button type="button" class="btn-primary" (click)="contactMe()">
+        Contact Me
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="skills" class="skills-section">
+
+  <div class="section-container">
+
+    <p class="section-label">TECHNOLOGIES</p>
+
+    <h2>My Skills</h2>
+
+    <div class="skills-list">
+
+      @for (skill of skills; track skill) {
+        <span class="skill-item">
+          {{ skill }}
+        </span>
+      }
+
+    </div>
+
+  </div>
+
+</section>
