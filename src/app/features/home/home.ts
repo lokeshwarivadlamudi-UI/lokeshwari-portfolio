@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { SectionTitle } from '../../shared/section-title/section-title';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [SectionTitle],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
@@ -22,7 +23,7 @@ export class Home {
     'SCSS',
     'Bootstrap',
     'MongoDB',
-    'Spting Boot'
+    'Spring Boot'
   ];
     protected contactMe(): void {
    window.location.href = 'mailto:lokeshwarivadlamudi@gmail.com';
