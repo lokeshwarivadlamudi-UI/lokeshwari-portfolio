@@ -1,0 +1,51 @@
+.experience-card {
+  padding: 2rem;
+
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.experience-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.company {
+  margin: 0.5rem 0 1rem;
+
+  color: #1e3a5f;
+  font-weight: 600;
+}
+
+.description {
+  margin: 0;
+
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.technology {
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.4rem 0.8rem;
+
+  background: #f1f5f9;
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-bottom: 1rem;
+
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
