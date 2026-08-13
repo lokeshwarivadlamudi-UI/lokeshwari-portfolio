@@ -1,0 +1,24 @@
+<section id="projects" class="projects-section">
+
+  <div class="section-container">
+
+    <app-section-title
+      label="PROJECTS"
+      title="Selected Work">
+    </app-section-title>
+
+    <div class="projects-grid">
+
+      @for (project of projects; track project.title) {
+
+        <app-project-card
+          [project]="project">
+        </app-project-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
