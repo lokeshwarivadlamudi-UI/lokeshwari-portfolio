@@ -5,10 +5,11 @@ import { Home } from "./features/home/home";
 import { About } from "./features/about/about";
 import { Experience } from './features/experience/experience';
 import { Projects } from './features/projects/projects';
+import { Contact } from './features/contact/contact';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Nav, Home, Home, About, Experience, Projects],
+  imports: [RouterOutlet, Nav, Home, Home, About, Experience, Projects, Contact],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
