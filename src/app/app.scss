@@ -6,4 +6,15 @@
   .buttons {
     flex-direction: column;
   }
-}
+
+    .navbar-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+} 
