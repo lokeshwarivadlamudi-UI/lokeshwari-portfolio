@@ -1,5 +1,5 @@
 .about-section {
-  padding: 6rem 2rem;
+  padding: 3rem 2rem 5rem;
 }
 
 .section-container {
@@ -18,7 +18,7 @@ h2 {
   max-width: 750px;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.2;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 1.5rem;
 }
 
 .about-content {
@@ -30,4 +30,46 @@ h2 {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+}
+
+.about-highlights {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.highlight {
+  flex: 1;
+  min-width: 180px;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #dbe3ec;
+  border-radius: 12px;
+}
+
+.highlight strong {
+  display: block;
+  color: #1e3a5f;
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.highlight span {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-highlights {
+    flex-direction: column;
+  }
+
+  .highlight {
+    min-width: unset;
+  }
 }
