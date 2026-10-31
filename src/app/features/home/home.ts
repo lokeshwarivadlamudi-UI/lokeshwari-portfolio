@@ -12,7 +12,7 @@ export class Home {
   protected readonly name = signal('Lokeshwari Vadlamudi');
   protected readonly role = signal('Frontend Developer | Angular & TypeScript');
   protected readonly description = signal(
-    'Frontend developer with 5 years of experience building responsive web and cross-platform applications using Angular, TypeScript, Ionic and REST APIs.'
+    'Frontend developer with approximately 5 years of experience building responsive web and cross-platform applications using Angular, TypeScript, Ionic and REST APIs.'
   );
   protected readonly skills = [
 'Angular',

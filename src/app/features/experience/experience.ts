@@ -15,7 +15,7 @@ export class Experience {
  {
     role: 'Software Developer',
     company: 'Epitome Cloud Technology Pvt Ltd',
-    duration: 'Jan 2024 – Dec 2024',
+    duration: 'Jan 2024 – Feb 2025',
     type: 'Contract',
     description:
       'Developed the Amagram cross-platform application and Amagram Admin web application using Angular, Ionic, TypeScript and REST APIs. Worked on reusable UI components, backend integration and application features for Android, iOS and Web.',
@@ -31,7 +31,7 @@ export class Experience {
   {
     role: 'Software Developer',
     company: 'JINSoftz Technology Private Limited',
-    duration: 'Mar 2020 – May 2022',
+    duration: 'Mar 2020 – Oct 2022',
     type: 'Full Time',
     description:
       'Developed responsive Angular web applications for business and e-commerce clients, including AALILAI, EEEZE, OHAV USA and JinzCart. Worked directly with clients to understand requirements and deliver frontend solutions.',
@@ -47,7 +47,7 @@ export class Experience {
   {
     role: 'Software Developer',
     company: 'Icrederity Info Services Pvt Ltd',
-    duration: 'Jun 2019 – Nov 2019',
+    duration: 'Jun 2019 – Dec 2019',
     type: 'Freelance',
     description:
       'Developed the Reflogy referral and rewards Android application using Ionic. Focused on intuitive user interfaces, user engagement and application performance.',

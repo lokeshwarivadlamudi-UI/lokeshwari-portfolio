@@ -36,6 +36,10 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+## Deployment
+
+The site is deployed to [GitHub Pages](https://lokeshwarivadlamudi-ui.github.io/lokeshwari-portfolio/). Pushing to `main` runs the GitHub Actions workflow in `.github/workflows/deploy.yml`, builds the Angular app with the repository URL as its base path, and publishes the output to the `gh-pages` branch.
+
 ## Running unit tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
