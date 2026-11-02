@@ -1,6 +1,6 @@
 <section class="hero" id="home">
   <div class="hero-content">
-    <div class="hero-copy">
+    <div class="hero-copy" animate.enter="intro-in">
       <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> FRONTEND DEVELOPER · SWEDEN</p>
       <h1>Hi, I’m <span>{{name()}}</span><br>and I build for <em>people.</em></h1>
       <h2>{{role()}}</h2>
@@ -9,10 +9,11 @@
       <div class="hero-actions">
         <a href="#projects" class="btn-primary">Explore my work <span aria-hidden="true">↘</span></a>
         <a href="#contact" class="btn-secondary">Get in touch <span aria-hidden="true">↗</span></a>
+        <a class="btn-secondary" [href]="cvUrl" target="_blank" rel="noopener noreferrer">View my CV <span aria-hidden="true">↗</span></a>
       </div>
       <div class="hero-note"><span>Based in Södertälje, Sweden</span><span>·</span><span>Web &amp; mobile</span></div>
     </div>
-    <aside class="hero-card" aria-label="A snapshot of my work">
+    <aside class="hero-card" aria-label="A snapshot of my work" animate.enter="intro-in intro-delay">
       <div class="card-orbit orbit-one"></div><div class="card-orbit orbit-two"></div>
       <div class="hero-card-inner">
         <span class="card-kicker">DESIGNING FOR EVERY SCREEN</span>

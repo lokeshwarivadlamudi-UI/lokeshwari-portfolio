@@ -14,34 +14,9 @@ export class Home {
   protected readonly description = signal(
     'Frontend developer with approximately 5 years of experience building responsive web and cross-platform applications using Angular, TypeScript, Ionic and REST APIs.'
   );
+  protected readonly cvUrl = 'https://lokeshwarivadlamudi-ui.github.io/lokeshwari-portfolio/Lokeshwari-Vadlamudi-CV.pdf';
   protected readonly skills = [
-'Angular',
-  'TypeScript',
-  'JavaScript',
-  'RxJS',
-  'Ionic',
-  'HTML5',
-  'CSS3',
-  'SCSS',
-  'REST APIs',
-  'Bootstrap',
-  'Git',
-  'GitHub',
-  'Agile / Scrum'
+    'Angular', 'TypeScript', 'JavaScript', 'RxJS', 'Ionic', 'HTML5', 'CSS3', 'SCSS',
+    'REST APIs', 'Bootstrap', 'Git', 'GitHub', 'Agile / Scrum'
   ];
-
-  protected contactMe(): void {
-    window.location.href = 'mailto:lokeshwarivadlamudi@gmail.com';
-  }
-
-  protected downloadCv(): void {
-    const link = document.createElement('a');
-    link.href = '/Lokeshwari-Vadlamudi-CV.pdf';
-    link.download = 'Lokeshwari-Vadlamudi-CV.pdf';
-    link.target = '_blank';
-    link.rel = 'noopener';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }
 }

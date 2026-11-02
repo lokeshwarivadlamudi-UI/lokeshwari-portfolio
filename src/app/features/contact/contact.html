@@ -1,10 +1,29 @@
 <section class="contact" id="contact">
-  <h5>GET IN TOUCH</h5>
-  <h2>Let’s build something useful.</h2>
-  <p>I'm currently looking for frontend developer opportunities in Sweden. Feel free to get in touch.</p>
-  <div class="contact-details">
-    <p><a href="mailto:lokeshwarivadlamudi@gmail.com">lokeshwarivadlamudi@gmail.com</a></p>
-    <p><a href="tel:+46739282872">+46 739 282 872</a></p>
-    <p>Södertälje, Sweden</p>
+  <div class="contact-intro">
+    <h5>GET IN TOUCH</h5>
+    <h2>Let’s build something useful.</h2>
+    <p>I'm currently looking for frontend developer opportunities in Sweden. Feel free to get in touch.</p>
+    <div class="contact-details">
+      <p><a href="mailto:lokeshwarivadlamudi@gmail.com">lokeshwarivadlamudi@gmail.com</a></p>
+      <p><a href="tel:+46739282872">+46 739 282 872</a></p>
+      <p>Södertälje, Sweden</p>
+    </div>
   </div>
+
+  <aside class="cv-panel" aria-labelledby="cv-panel-title" animate.enter="cv-panel-enter">
+    <a class="qr-link" [href]="cvUrl" target="_blank" rel="noopener noreferrer" aria-label="Open the CV PDF">
+      <img src="cv-qr.svg" alt="QR code that opens Lokeshwari Vadlamudi's CV PDF" width="176" height="176">
+    </a>
+    <div class="cv-panel-copy">
+      <p class="cv-eyebrow">A QUICK LOOK AT MY EXPERIENCE</p>
+      <h3 id="cv-panel-title">Take my CV with you.</h3>
+      <p class="cv-hint">Scan with your phone camera to open the PDF. On your phone? Tap Open CV below.</p>
+      <div class="cv-actions">
+        <a class="cv-open" [href]="cvUrl" target="_blank" rel="noopener noreferrer">Open CV <span aria-hidden="true">↗</span></a>
+        <button type="button" class="cv-share" (click)="shareCv()">Share CV</button>
+        <button type="button" class="cv-copy" (click)="copyCvLink()">Copy link</button>
+      </div>
+      <p class="share-status" role="status" aria-live="polite">{{ shareStatus() }}</p>
+    </div>
+  </aside>
 </section>
