@@ -7,10 +7,11 @@ import { Experience } from './features/experience/experience';
 import { Projects } from './features/projects/projects';
 import { Contact } from './features/contact/contact';
 import { Footer } from './shared/footer/footer';
+import { CvQrWidget } from './shared/cv-qr-widget/cv-qr-widget';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Nav, Home, About, Experience, Projects, Contact, Footer],
+  imports: [RouterOutlet, Nav, Home, About, Experience, Projects, Contact, Footer, CvQrWidget],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

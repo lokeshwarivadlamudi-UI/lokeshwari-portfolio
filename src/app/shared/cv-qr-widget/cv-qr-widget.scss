@@ -1,0 +1,40 @@
+:host { display: block; position: relative; z-index: 60; }
+.cv-widget { position: fixed; right: max(20px, env(safe-area-inset-right)); bottom: calc(22px + env(safe-area-inset-bottom)); z-index: 60; }
+.cv-fab { display: flex; width: 64px; height: 64px; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border: 1px solid rgba(255,255,255,.45); border-radius: 50%; background: var(--brand); color: white; box-shadow: 0 9px 24px rgba(15,65,54,.28); font-size: .65rem; font-weight: 800; letter-spacing: .06em; transition: transform .2s ease, background-color .2s ease, box-shadow .2s ease; }
+.cv-fab:hover { transform: translateY(-3px); background: var(--brand-dark); box-shadow: 0 13px 28px rgba(15,65,54,.34); }
+.cv-fab svg { width: 24px; height: 24px; fill: currentColor; }
+.cv-panel { position: absolute; right: 0; bottom: calc(100% + 14px); width: min(380px, calc(100vw - 32px)); padding: 18px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); box-shadow: 0 22px 55px rgba(18,61,56,.2); color: var(--ink); }
+.cv-panel-in { animation: cv-pop-in .24s cubic-bezier(.2,.75,.25,1) both; transform-origin: bottom right; }
+.cv-panel-out { animation: cv-pop-out .18s ease-in both; transform-origin: bottom right; pointer-events: none; }
+@keyframes cv-pop-in { from { opacity: 0; transform: translateY(8px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes cv-pop-out { from { opacity: 1; transform: translateY(0) scale(1); } to { opacity: 0; transform: translateY(5px) scale(.98); } }
+.cv-panel-heading { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.cv-eyebrow { margin: 0 0 5px; color: var(--brand); font-size: .62rem; font-weight: 800; letter-spacing: .1em; }
+.cv-panel h2 { margin: 0; color: var(--ink); font-family: Manrope, sans-serif; font-size: 1.15rem; line-height: 1.3; letter-spacing: -.035em; }
+.close-button { display: grid; width: 34px; height: 34px; flex: 0 0 auto; place-items: center; border: 1px solid var(--line); border-radius: 50%; background: white; color: var(--muted); font-size: 1.35rem; line-height: 1; }
+.close-button:hover { border-color: #b7d6c4; color: var(--brand); }
+.cv-panel-body { display: grid; grid-template-columns: 132px minmax(0, 1fr); align-items: center; gap: 14px; margin-top: 14px; }
+.qr-link { display: grid; width: 132px; height: 132px; place-items: center; border: 5px solid white; border-radius: 12px; background: white; box-shadow: 0 4px 14px rgba(18,61,56,.11); }
+.qr-link img { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
+.cv-panel-copy { min-width: 0; }
+.cv-hint { margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.5; }
+.cv-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+.cv-actions a, .cv-actions button { display: inline-flex; min-height: 39px; align-items: center; justify-content: center; gap: 6px; padding: 0 11px; border: 1px solid #b7d6c4; border-radius: 8px; background: white; color: var(--brand); font: inherit; font-size: .78rem; font-weight: 700; text-decoration: none; transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease; }
+.cv-actions .cv-open { border-color: var(--brand); background: var(--brand); color: white; }
+.cv-actions a:hover, .cv-actions button:hover { transform: translateY(-1px); box-shadow: 0 5px 13px rgba(18,107,91,.13); }
+.cv-actions .cv-open:hover { background: var(--brand-dark); }
+.cv-actions button { cursor: pointer; }
+.share-status { min-height: 1.25em; margin: 8px 0 0; color: var(--brand-dark); font-size: .74rem; overflow-wrap: anywhere; }
+@media (max-width: 520px) {
+  .cv-widget { right: max(16px, env(safe-area-inset-right)); bottom: calc(16px + env(safe-area-inset-bottom)); }
+  .cv-panel { position: fixed; right: 12px; bottom: calc(88px + env(safe-area-inset-bottom)); left: 12px; width: auto; max-height: min(75dvh, 560px); overflow-y: auto; }
+  .cv-panel-body { grid-template-columns: 112px minmax(0, 1fr); gap: 12px; }
+  .qr-link { width: 112px; height: 112px; }
+}
+@media (max-width: 360px) {
+  .cv-panel { padding: 14px; }
+  .cv-panel-body { grid-template-columns: 92px minmax(0, 1fr); gap: 10px; }
+  .qr-link { width: 92px; height: 92px; }
+  .cv-actions { gap: 6px; }
+  .cv-actions a, .cv-actions button { min-height: 36px; padding-inline: 8px; font-size: .74rem; }
+}
