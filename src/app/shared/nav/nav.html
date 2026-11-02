@@ -1,19 +1,21 @@
-<nav class="navbar">
+<nav class="navbar" aria-label="Main navigation">
   <div class="navbar-container">
-    <a class="brand" href="#">
-      Lokeshwari
+    <a class="brand" href="#home" (click)="closeMenu()" aria-label="Lokeshwari Vadlamudi, home">
+      <span class="brand-mark" aria-hidden="true">LV</span>
+      <span>Lokeshwari<span class="brand-dot">.</span></span>
     </a>
 
-    <button class="menu-button">
-      ☰
+    <button class="menu-button" type="button" [attr.aria-expanded]="menuOpen()" aria-controls="primary-links" (click)="toggleMenu()">
+      <span class="menu-icon" aria-hidden="true">{{ menuOpen() ? '×' : '☰' }}</span>
+      <span class="sr-only">{{ menuOpen() ? 'Close menu' : 'Open menu' }}</span>
     </button>
 
-    <div class="nav-links">
-      <a id="about" href="#about">About</a>
-      <a id="skill" href="#skills">Skills</a>
-      <a id="experience" href="#experience">Experience</a>
-      <a id="projects" href="#projects">Projects</a>
-      <a id="contact" href="#contact">Contact</a>
+    <div id="primary-links" class="nav-links" [class.is-open]="menuOpen()">
+      <a href="#about" (click)="closeMenu()">About</a>
+      <a href="#skills" (click)="closeMenu()">Skills</a>
+      <a href="#experience" (click)="closeMenu()">Experience</a>
+      <a href="#projects" (click)="closeMenu()">Projects</a>
+      <a class="nav-contact" href="#contact" (click)="closeMenu()">Let’s talk <span aria-hidden="true">↗</span></a>
     </div>
   </div>
 </nav>

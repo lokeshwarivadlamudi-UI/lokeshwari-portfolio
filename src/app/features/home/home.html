@@ -1,62 +1,35 @@
-<section class="hero">
-
+<section class="hero" id="home">
   <div class="hero-content">
-
-    <p class="greeting">Hi, I'm</p>
-
-    <h1>{{name()}}</h1>
-
-    <h2>{{role()}}</h2>
-
-    <p class="description">
-      {{description()}}
-    </p>
-
-    <p class="availability">
-      @if (isAvailable()) {
-        🟢 Open to opportunities in Sweden
-      } @else {
-        ⚪ Currently unavailable
-      }
-    </p>
-
-    <div class="hero-actions">
-      <a href="#projects" class="btn-primary">
-        View My Projects
-      </a>
-
-      <button type="button" class="btn-primary" (click)="contactMe()">
-        Contact Me
-      </button>
-
-      <button type="button" class="btn-primary" (click)="downloadCv()">
-        Download CV
-      </button>
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> FRONTEND DEVELOPER · SWEDEN</p>
+      <h1>Hi, I’m <span>{{name()}}</span><br>and I build for <em>people.</em></h1>
+      <h2>{{role()}}</h2>
+      <p class="description">{{description()}}</p>
+      <p class="availability">{{ isAvailable() ? 'Open to frontend opportunities in Sweden' : 'Currently unavailable' }}</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Explore my work <span aria-hidden="true">↘</span></a>
+        <a href="#contact" class="btn-secondary">Get in touch <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-note"><span>Based in Södertälje, Sweden</span><span>·</span><span>Web &amp; mobile</span></div>
     </div>
-
+    <aside class="hero-card" aria-label="A snapshot of my work">
+      <div class="card-orbit orbit-one"></div><div class="card-orbit orbit-two"></div>
+      <div class="hero-card-inner">
+        <span class="card-kicker">DESIGNING FOR EVERY SCREEN</span>
+        <div class="device-row" aria-hidden="true"><div class="device desktop"><span></span><i></i></div><div class="device tablet"><span></span></div><div class="device phone"><span></span></div></div>
+        <p>One thoughtful experience.<br><strong>Web, iOS &amp; Android.</strong></p>
+        <div class="card-tags"><span>Angular</span><span>Ionic</span><span>TypeScript</span></div>
+      </div>
+      <span class="floating-star" aria-hidden="true">✳</span>
+    </aside>
   </div>
-
 </section>
 
 <section id="skills" class="skills-section">
-
   <div class="section-container">
-
-    <app-section-title
-    label="TECHNOLOGIES"
-    title="My Skills">
-    </app-section-title>
-
+    <app-section-title label="MY TOOLKIT" title="Tools I work with"></app-section-title>
     <div class="skills-list">
-
-      @for (skill of skills; track skill) {
-        <span class="skill-item">
-          {{ skill }}
-        </span>
-      }
-
+      @for (skill of skills; track skill) { <span class="skill-item">{{ skill }}</span> }
     </div>
-
   </div>
-
 </section>
